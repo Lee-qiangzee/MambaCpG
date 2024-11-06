@@ -20,7 +20,7 @@
 We recommend adhering to the following instructions for local deployment and leveraging GPU resources for model training:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/Lee-qiangzee/MambaCpG.git
 cd MambaCpG
 conda create --name MambaCpG python=3.10
 source activate MambaCpG
@@ -42,5 +42,3 @@ python impute.py
 
 ## Citation
 
-## License
-MIT LICENSE
