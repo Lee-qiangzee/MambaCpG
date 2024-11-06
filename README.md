@@ -12,7 +12,7 @@
 | Neuron-Homo   | 780   |     90.34     |         92.95         |      93.25     |    **94.20**   |
 
 
-## Construction process of methylation matrix and structure of MambaCpG.
+## Construction process of methylation matrix and structure of MambaCpG
 ![Image text](figure1.png)
 
 
@@ -30,6 +30,7 @@ Then manually download the following two libraries, upload them to the project, 
 [mamba-ssm](https://github.com/state-spaces/mamba/releases/download/v1.2.0.post1/mamba_ssm-1.2.0.post1+cu118torch2.0cxx11abiFALSE-cp310-cp310-linux_x86_64.whl)
 
 [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.2.0.post2/causal_conv1d-1.2.0.post2+cu118torch2.0cxx11abiFALSE-cp310-cp310-linux_x86_64.whl)
+
 Finally:
 ```bash
 pip install -r requirements.txt
