@@ -1,5 +1,4 @@
 # MambaCpG
-# MambaCpG
 
 ## Performance comparison between MambaCpG and other models on different scale datasets
 | Dataset       | Ncell | (AUC) DeepCpG | (AUC) CpG Transformer | (AUC) GraphCpG | (AUC) MambaCpG |
