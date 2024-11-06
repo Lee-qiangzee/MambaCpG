@@ -13,7 +13,7 @@
 
 
 ## Construction process of methylation matrix and structure of MambaCpG.
-![Image text]()
+![Image text](figure1.png)
 
 
 ## Installation
@@ -26,8 +26,11 @@ conda create --name MambaCpG python=3.10
 source activate MambaCpG
 ```
 Then manually download the following two libraries, upload them to the project, and install them using `pip install` with the file paths.
+
 [mamba-ssm](https://github.com/state-spaces/mamba/releases/download/v1.2.0.post1/mamba_ssm-1.2.0.post1+cu118torch2.0cxx11abiFALSE-cp310-cp310-linux_x86_64.whl)
+
 [causal-conv1d](https://github.com/Dao-AILab/causal-conv1d/releases/download/v1.2.0.post2/causal_conv1d-1.2.0.post2+cu118torch2.0cxx11abiFALSE-cp310-cp310-linux_x86_64.whl)
+Finally:
 ```bash
 pip install -r requirements.txt
 ```
