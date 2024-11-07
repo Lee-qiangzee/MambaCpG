@@ -46,3 +46,7 @@ python impute.py
 
 ## Citation
 
+## Acknowledgment
+DeepCpG[Paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1189-z)[Code](https://github.com/cangermueller/deepcpg)
+CpG Transformer[Paper](https://academic.oup.com/bioinformatics/article/38/3/597/6413629?)[Code](https://github.com/gdewael/cpg-transformer)
+GraphCpG[Paper](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btad533/7255916?)[Code](https://github.com/yuzhong-deng/graphcpg)
