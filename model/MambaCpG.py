@@ -66,7 +66,8 @@ class MambaCpG(pl.LightningModule):
         scheduler = lr_scheduler.CosineAnnealingLR(optimizer, T_max=self.hparams.total_epochs)
         return [optimizer], [scheduler]
     
-    def optimizer_step(self, optimizer, optimizer_closure):
+    def optimizer_step(self, epoch, batch_idx, optimizer, optimizer_idx,
+                       optimizer_closure, on_tpu, using_native_amp, using_lbfgs):
         if self.trainer.global_step < self.hparams.warmup_steps:
             lr_scale = min(1., float(self.trainer.global_step + 1) / self.hparams.warmup_steps)
             for pg in optimizer.param_groups:
