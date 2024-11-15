@@ -6,8 +6,8 @@ from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint, LearningRateMonitor
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 from pytorch_lightning.strategies import DDPStrategy
-from model.MambaCpG import MambaCpG
-from model.datamodules import MambaCpGDataModule
+from MambaCpG import MambaCpG
+from datamodules import MambaCpGDataModule
 
 
 def boolean(v):
