@@ -2,8 +2,8 @@ import numpy as np
 import torch
 from argparse import ArgumentParser
 import argparse
-from model.MambaCpG import MambaCpG
-from model.datamodules import MambaCpGImputingDataModule
+from MambaCpG import MambaCpG
+from datamodules import MambaCpGImputingDataModule
 
 def boolean(v):
     if isinstance(v, bool): return v
