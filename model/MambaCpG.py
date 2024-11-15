@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import pytorch_lightning as pl
 from torchmetrics.functional import auroc, accuracy, f1_score
-from model.blocks import BiMamba, CnnL2h128
+from blocks import BiMamba, CnnL2h128
 import torch.optim.lr_scheduler as lr_scheduler
 
 
