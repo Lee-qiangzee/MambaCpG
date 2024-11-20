@@ -81,7 +81,7 @@ X = np.load(args.X)
 y = np.load(args.y)
 pos = np.load(args.pos)
 
-ncell = y.shape[0]
+n_cells = y[list(y.keys())[0]].shape[1]
 
 model = MambaCpG(ncell, dim=args.dim, nmamba=args.nmamba, lr=args.lr, warmup_steps=args.warmup_steps, total_epochs=args.total_epochs)
 datamodule = MambaCpGDataModule(X, y, pos, DNA_window=args.DNA_window, val_keys=args.val_keys, test_keys=args.test_keys,
