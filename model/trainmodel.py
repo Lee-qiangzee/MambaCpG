@@ -55,7 +55,7 @@ model_parse.add_argument('--nmamba', type=int, default=4,
                          help='Number of mamba blocks to use.')
 model_parse.add_argument('--total_epochs', type=int, default=35,
                          help='Cosine decay period.')
-model_parse.add_argument('--lr', type=float, default=1e-3,
+model_parse.add_argument('--lr', type=float, default=3e-3,
                          help='Learning rate.')
 model_parse.add_argument('--warmup_steps', type=int, default=1000,
                          help='Number of steps over which the learning rate will linearly warm up.')
