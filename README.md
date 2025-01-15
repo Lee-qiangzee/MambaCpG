@@ -41,7 +41,7 @@ pip install -r requirements.txt
 # train a model
 python trainmodel.py X.npz y.npz pos.npz
 # impute your dataset
-python impute.py
+python impute.py X.npz y.npz pos.npz output
 ```
 
 ## Citation
