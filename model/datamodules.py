@@ -39,8 +39,8 @@ class MambaCpGDataModule(pl.LightningDataModule):
             start = posx - self.hDNA_win
             end = posx + self.hDNA_win + 1
             DNA_seg = []  
-            for start, end in zip(start, end):
-                DNA_seg.append(DNAx[start:end]) # (_, DNA_win)
+            for s, e in zip(start, end):
+                DNA_seg.append(DNAx[s:e]) # (_, DNA_win)
             DNA_seg = torch.stack(DNA_seg)
 
             n_pos = len(pos)
@@ -122,11 +122,10 @@ class MambaCpGDataset(torch.utils.data.Dataset):
         y_orig = torch.tensor(y_orig) - 1
 
         return y_orig, y_masked, mask_indices, cell_indices, x
-    
+
 
 class MambaCpGImputingDataModule(pl.LightningDataModule):
     def __init__(self, x, y, pos, DNA_window=1001, segment_size=1024, keys=None, n_workers=4):
-        assert keys is None or type(keys) is list, 'keys should be None or list'
         super().__init__()
         self.x = x
         self.y = y
@@ -156,8 +155,8 @@ class MambaCpGImputingDataModule(pl.LightningDataModule):
             start = posx - self.hDNA_win
             end = posx + self.hDNA_win + 1
             DNA_seg = []  
-            for start, end in zip(start, end):
-                DNA_seg.append(DNAx[start:end])
+            for s, e in zip(start, end):
+                DNA_seg.append(DNAx[s:e])
             DNA_seg = torch.stack(DNA_seg)
 
             batch_ = [(DNA_seg[i:i + self.segsz], y[i:i + self.segsz], pos[i:i + self.segsz] - pos[i])
@@ -176,8 +175,7 @@ class MambaCpGImputingDataModule(pl.LightningDataModule):
             batch_.append((end_DNA_seg, end_CpG_seg, end_pos_seg))               
 
             self.datasets_per_chr[chr_name] = torch.utils.data.DataLoader(
-                ImputingDataset(batch_, DNA_window=self.DNA_win),
-                num_workers = self.n_wor, shuffle=False, pin_memory=True)
+                ImputingDataset(batch_), num_workers = self.n_wor, shuffle=False, pin_memory=True)
             
 # Imputing dataset. Makes overlapping segments.
 class ImputingDataset(torch.utils.data.Dataset):
@@ -193,4 +191,3 @@ class ImputingDataset(torch.utils.data.Dataset):
         cell_indices = torch.arange(y.shape[1])
         
         return x, y_orig, cell_indices   
-     
