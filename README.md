@@ -33,6 +33,7 @@ python impute.py X.npz y.npz pos.npz output
 ```
 
 ## Citation
+Qi Zhao, Ze Li, Qian Mao, Tingwei Chen, Yiran Zhang, Bingle Li, Zheng Zhao, Xiaoya Fan, MambaCpG: an accurate model for single-cell DNA methylation status imputation using mamba, Briefings in Bioinformatics, Volume 26, Issue 4, July 2025, bbaf360, [https://doi.org/10.1093/bib/bbaf360](https://doi.org/10.1093/bib/bbaf360)
 
 ## Acknowledgement
 DeepCpG[(Paper)](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1189-z)[(Code)](https://github.com/cangermueller/deepcpg)
